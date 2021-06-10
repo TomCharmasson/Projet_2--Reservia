@@ -20,7 +20,24 @@
         <h1>Trouvez votre hébergement pour des vacances de rêves</h1>
         <h2>En plein centre ville ou en pleine nature</h2>
       </div>
-      <div class="location"></div>
+      <div class="location">
+        <form action="location.php" method="POST">
+          <p>
+            <i class="fas fa-map-marker-alt"></i>
+          </p>
+          <p>
+            <label for="search_location_button"></label>
+            <input
+              type="search"
+              placeholder="Marseille, France"
+              id="search_location_button"
+            />
+          </p>
+          <p>
+            <input type="submit" value="Rechercher" />
+          </p>
+        </form>
+      </div>
       <div class="filter"></div>
       <div class="info"></div>
       <section>
