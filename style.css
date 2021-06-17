@@ -6,7 +6,7 @@
 body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   background-color: white;
-  margin: 45px;
+  margin: 0px 45px 45px 45px;
 }
 
 /*-- Header -----------------------------------------------------------------*/
@@ -20,7 +20,8 @@ body {
 }
 
 h1 {
-  font-weight: bolder;
+  font-size: 1.7em;
+  font-weight: bold;
 }
 
 nav {
@@ -30,7 +31,17 @@ nav {
   background-color: white;
 }
 
+.navigation {
+  text-decoration: none;
+  color: black;
+}
+
+.navigation:hover {
+  color: #0065fc;
+}
+
 ul {
+  padding: 40px;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -38,8 +49,22 @@ ul {
   align-items: center;
 }
 
+li {
+  padding: 40px;
+}
+
 li:hover {
   border-top: 3px solid #0065fc;
+}
+
+.inscription {
+  text-decoration: none;
+  color: #0065fc;
+}
+
+.inscription:hover {
+  font-weight: bolder;
+  color: #0065fc;
 }
 
 /*-- Section 1 Titres Recherche Filtres Info --------------------------------*/
@@ -51,14 +76,15 @@ form {
 
 #search_location {
   background-color: white;
-  border-top: rgb(217, 217, 217) solid 1px;
-  border-bottom: rgb(217, 217, 217) solid 1px;
+  border-top: rgb(240, 240, 240) solid 1px;
+  border-bottom: rgb(240, 240, 240) solid 1px;
   border-left: none;
   border-right: none;
   padding: 10px;
 }
 
 #search_location_button {
+  color: white;
   background-color: #0065fc;
   border: solid #0065fc 1px;
   border-top-right-radius: 10px;
@@ -68,55 +94,69 @@ form {
 
 .filter {
   display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
-  width: 75%;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+h3 {
+  margin: 16px;
+}
+
+.filter_button h3 {
+  margin: 16px 0px;
 }
 
 .economique {
   border: 2px rgb(217, 217, 217) solid;
+  border-left: 0px;
   border-radius: 90px 90px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 10px;
-  height: 30px;
+  height: 50px;
+  margin-left: 20px;
 }
 
 .familial {
   border: 2px rgb(217, 217, 217) solid;
-  border-radius: 80px 80px;
+  border-left: 0px;
+  border-radius: 90px 90px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  height: 30px;
+  height: 50px;
+  margin-left: 20px;
 }
 
 .romantique {
   border: 2px rgb(217, 217, 217) solid;
-  border-radius: 80px 80px;
+  border-left: 0px;
+  border-radius: 90px 90px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  height: 30px;
+  height: 50px;
+  margin-left: 20px;
 }
 
 .animaux {
   border: 2px rgb(217, 217, 217) solid;
-  border-radius: 80px 80px;
+  border-left: 0px;
+  border-radius: 90px 90px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  height: 30px;
+  height: 50px;
+  margin-left: 20px;
 }
 
 .info {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  align-content: center;
-  width: 35%;
+}
+
+.info p {
+  margin-left: 15px;
 }
 
 /*-- Section 2 Hebergements Populaires --------------------------------------*/
@@ -131,16 +171,20 @@ article {
   border-radius: 30px;
   padding: 40px;
   width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-direction: row;
 }
 
 .conteneur_hebergements {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-content: space-between;
+  justify-content: space-between;
   background-color: rgb(242, 242, 242);
   border-radius: 30px;
-  height: 600px;
 }
 .hebergements {
   border: 10px white solid;
@@ -167,6 +211,7 @@ aside {
 }
 
 .populaires {
+  display: flex;
   border: 10px white solid;
   border-radius: 30px;
   background-color: white;
@@ -184,6 +229,8 @@ img {
 .conteneur_activites {
   display: flex;
   justify-content: space-between;
+  align-content: space-between;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -196,9 +243,11 @@ h5 {
 
 footer {
   display: flex;
-  justify-content: space-between;
-  width: 75%;
-  background-color: rgb(242, 242, 242);
+  background-color: white;
+}
+
+.footer_section {
+  margin-right: 350px;
 }
 
 /*-- Autres -----------------------------------------------------------------*/
