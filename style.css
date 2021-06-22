@@ -1,6 +1,16 @@
 @font-face {
-  font-family: "Raleway";
-  src: url(fonts/Raleway/Raleway-VariableFont_wght.ttf);
+  font-family: "ralewaythin";
+  src: url("fonts/Raleway/raleway-variablefont_wght-webfont.eot");
+  src: url("fonts/Raleway/raleway-variablefont_wght-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/Raleway/raleway-variablefont_wght-webfont.woff2") format("woff2"),
+    url("fonts/Raleway/raleway-variablefont_wght-webfont.woff") format("woff"),
+    url("fonts/Raleway/raleway-variablefont_wght-webfont.ttf")
+      format("truetype"),
+    url("fonts/Raleway/raleway-variablefont_wght-webfont.svg#ralewaythin")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -269,6 +279,7 @@ article {
   border-radius: 30px;
 }
 .hebergements {
+  overflow: hidden;
   border: 10px white solid;
   border-radius: 30px;
   background-color: white;
@@ -319,9 +330,12 @@ aside {
 }
 
 .hebergements img {
-  height: 160px;
-  width: 260px;
-  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  min-width: 220px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .populaires img {
