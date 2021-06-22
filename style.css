@@ -1,0 +1,415 @@
+@font-face {
+  font-family: "ralewaythin";
+  src: url("fonts/Raleway/raleway-variablefont_wght-webfont.eot");
+  src: url("fonts/Raleway/raleway-variablefont_wght-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/Raleway/raleway-variablefont_wght-webfont.woff2") format("woff2"),
+    url("fonts/Raleway/raleway-variablefont_wght-webfont.woff") format("woff"),
+    url("fonts/Raleway/raleway-variablefont_wght-webfont.ttf")
+      format("truetype"),
+    url("fonts/Raleway/raleway-variablefont_wght-webfont.svg#ralewaythin")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+
+main {
+  margin: 0px 45px;
+}
+/*-- Header -----------------------------------------------------------------*/
+
+.header {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin: 0px 45px 0px 45px;
+}
+
+header img {
+  width: auto;
+  height: auto;
+}
+
+h1 {
+  margin-top: 0px;
+  font-size: 1.7em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 0px 0px 0px;
+}
+
+li a {
+  color: black;
+  text-decoration: none;
+  padding: 40px;
+}
+
+li:hover a {
+  color: #0065fc;
+  border-top: 3px solid #0065fc;
+}
+
+.inscription {
+  text-decoration: none;
+  color: #0065fc;
+  padding: 40px;
+  transition-duration: 0.4s;
+}
+
+.inscription:hover {
+  transform: scale(1.4);
+}
+
+/*-- Section 1 Titres Recherche Filtres Info --------------------------------*/
+
+#section_1 {
+  margin: 0px 0px 20px 0px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+#search_location {
+  border-top: rgb(240, 240, 240) solid 1px;
+  border-bottom: rgb(240, 240, 240) solid 1px;
+  border-left: none;
+  border-right: none;
+  padding: 10px;
+  background-color: white;
+  height: 60px;
+  width: 250px;
+  font-size: 1.4em;
+}
+
+input:focus {
+  outline: none;
+}
+
+#search_location_button {
+  border: solid #0065fc 1px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #0065fc;
+  color: white;
+  height: 60px;
+  width: 160px;
+  font-size: 1.4em;
+}
+
+#search_location_button:hover {
+  cursor: pointer;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+}
+
+.filter_button {
+  color: black;
+  border: none;
+  background-color: white;
+}
+
+.filter_button:hover {
+  cursor: pointer;
+}
+
+.filter_button h3 {
+  margin-left: 0px;
+}
+
+.filter:hover {
+  color: #0065fc;
+}
+
+.filter_button a {
+  text-decoration: none;
+  color: black;
+}
+
+h3 {
+  margin: 16px 16px 16px 16px;
+}
+
+.economique {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
+  margin: 20px;
+  border: 2px rgb(217, 217, 217) solid;
+  border-left: 0px;
+  border-radius: 90px 90px;
+  padding: 0px;
+  transition-duration: 0.4s;
+  background-color: white;
+}
+
+.economique:hover {
+  background-color: #0065fc;
+  color: white;
+  cursor: pointer;
+}
+
+.familial {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin: 20px;
+  border: 2px rgb(217, 217, 217) solid;
+  border-left: 0px;
+  border-radius: 90px 90px;
+  padding: 0px;
+  transition-duration: 0.4s;
+  background-color: white;
+}
+
+.familial:hover {
+  background-color: #0065fc;
+  color: white;
+  cursor: pointer;
+}
+
+.romantique {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin: 20px;
+  border: 2px rgb(217, 217, 217) solid;
+  border-left: 0px;
+  border-radius: 90px 90px;
+  padding: 0px;
+  transition-duration: 0.4s;
+  background-color: white;
+}
+
+.romantique:hover {
+  background-color: #0065fc;
+  color: white;
+  cursor: pointer;
+}
+
+.animaux {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin: 20px;
+  border: 2px rgb(217, 217, 217) solid;
+  border-left: 0px;
+  border-radius: 90px 90px;
+  padding: 0px;
+  transition-duration: 0.4s;
+  background-color: white;
+}
+
+.animaux:hover {
+  background-color: #0065fc;
+  color: white;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.info p {
+  margin-left: 15px;
+}
+
+/*-- Section 2 Hebergements Populaires --------------------------------------*/
+
+#section_hebergements {
+  justify-content: space-between;
+  display: flex;
+}
+
+#section_hebergements h4 {
+  margin: 0px;
+  font-size: 20px;
+}
+
+#section_hebergements p {
+  margin: 10px 0px;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  background-color: rgb(242, 242, 242);
+  border-radius: 30px;
+  padding: 40px;
+  width: 60%;
+}
+
+.conteneur_hebergements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  background-color: rgb(242, 242, 242);
+  border-radius: 30px;
+}
+.hebergements {
+  overflow: hidden;
+  border: 10px white solid;
+  border-radius: 30px;
+  background-color: white;
+  margin: 20px 40px 20px 0px;
+  box-shadow: 0px 0px 15px gray;
+  transition: 0.5s;
+}
+
+.hebergements:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.text_box_hebergements {
+  margin: 10px;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: 25%;
+  border-radius: 30px;
+  background-color: rgb(242, 242, 242);
+}
+
+.conteneur_populaires {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(242, 242, 242);
+  border-radius: 30px;
+}
+
+.populaires {
+  display: flex;
+  border: 10px white solid;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: 0px 0px 15px gray;
+  margin: 20px 0px;
+  transition: 0.5s;
+}
+
+.populaires:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.hebergements img {
+  width: 100%;
+  min-width: 220px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.populaires img {
+  height: 160px;
+  width: 160px;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.text_box {
+  margin: 10px;
+}
+
+/*-- Section 3 Activités ----------------------------------------------------*/
+
+#section_activites {
+  margin: 40px 0px;
+}
+
+.conteneur_activites {
+  display: flex;
+  justify-content: flex-start;
+  align-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.conteneur_activites h4 {
+  margin-left: 20px;
+}
+
+.activites {
+  margin: 20px 40px 20px 0px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px gray;
+  transition-duration: 0.4s;
+}
+
+.activites:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.conteneur_activites img {
+  max-width: 100%;
+  height: 160px;
+  width: 240px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+/*-- Footer -----------------------------------------------------------------*/
+
+footer {
+  display: flex;
+  background-color: rgb(242, 242, 242);
+  padding: 40px;
+}
+
+#conteneur_footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+.footer_text {
+  margin-right: 350px;
+}
+
+/*-- Autres -----------------------------------------------------------------*/
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
