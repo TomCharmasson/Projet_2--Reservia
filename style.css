@@ -68,6 +68,7 @@ li:hover a {
 }
 
 .inscription {
+  font-weight: bold;
   text-decoration: none;
   color: #0065fc;
   padding: 40px;
@@ -78,15 +79,25 @@ li:hover a {
   transform: scale(1.4);
 }
 
-/*-- Section 1 Titres Recherche Filtres Info --------------------------------*/
+/*-- Section 1 Titres -------------------------------------------------------*/
 
 #section_1 {
   margin: 0px 0px 20px 0px;
 }
 
+/*-- Section 1 Recherche ----------------------------------------------------*/
+
 form {
   display: flex;
   align-items: center;
+}
+
+#icone_map {
+  font-size: larger;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 18px 22px 19px 22px;
+  background-color: rgb(240, 240, 240);
 }
 
 #search_location {
@@ -120,11 +131,17 @@ input:focus {
   cursor: pointer;
 }
 
+/*-- Section 1 Filtres ------------------------------------------------------*/
+
 .filter {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: space-between;
+}
+
+.filter:hover {
+  color: #0065fc;
 }
 
 .filter_button {
@@ -141,10 +158,6 @@ input:focus {
   margin-left: 0px;
 }
 
-.filter:hover {
-  color: #0065fc;
-}
-
 .filter_button a {
   text-decoration: none;
   color: black;
@@ -154,7 +167,7 @@ h3 {
   margin: 16px 16px 16px 16px;
 }
 
-.economique {
+.filters_buttons {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -168,70 +181,48 @@ h3 {
   background-color: white;
 }
 
-.economique:hover {
+.filters_buttons:hover {
   background-color: #0065fc;
   color: white;
   cursor: pointer;
 }
 
-.familial {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  margin: 20px;
-  border: 2px rgb(217, 217, 217) solid;
-  border-left: 0px;
-  border-radius: 90px 90px;
-  padding: 0px;
-  transition-duration: 0.4s;
+#economique {
+  color: rgb(0, 086, 246);
+  border-radius: 40px;
+  padding: 17px 16px 17px 16px;
+  background-color: rgb(216, 232, 254);
+}
+
+#familial {
+  color: rgb(0, 086, 246);
+  border-radius: 40px;
+  padding: 17px 19px 17px 19px;
+  background-color: rgb(216, 232, 254);
+}
+
+#romantique {
+  color: rgb(0, 086, 246);
+  border-radius: 40px;
+  padding: 17px 18px 17px 18px;
+  background-color: rgb(216, 232, 254);
+}
+
+#animaux {
+  color: rgb(0, 086, 246);
+  border-radius: 40px;
+  padding: 17px 17px 17px 17px;
+  background-color: rgb(216, 232, 254);
+}
+
+/*-- Section 1 Info -------------------------------------------------------*/
+
+#info {
+  color: rgb(0, 086, 246);
+  border: 1px rgb(240, 240, 240) solid;
+  border-radius: 40px;
+  padding: 9px 15px 9px 15px;
   background-color: white;
-}
-
-.familial:hover {
-  background-color: #0065fc;
-  color: white;
-  cursor: pointer;
-}
-
-.romantique {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  margin: 20px;
-  border: 2px rgb(217, 217, 217) solid;
-  border-left: 0px;
-  border-radius: 90px 90px;
-  padding: 0px;
-  transition-duration: 0.4s;
-  background-color: white;
-}
-
-.romantique:hover {
-  background-color: #0065fc;
-  color: white;
-  cursor: pointer;
-}
-
-.animaux {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  margin: 20px;
-  border: 2px rgb(217, 217, 217) solid;
-  border-left: 0px;
-  border-radius: 90px 90px;
-  padding: 0px;
-  transition-duration: 0.4s;
-  background-color: white;
-}
-
-.animaux:hover {
-  background-color: #0065fc;
-  color: white;
-  cursor: pointer;
 }
 
 .info {
@@ -243,7 +234,7 @@ h3 {
   margin-left: 15px;
 }
 
-/*-- Section 2 Hebergements Populaires --------------------------------------*/
+/*-- Section 2 Hebergements ------------------------------------------------*/
 
 #section_hebergements {
   justify-content: space-between;
@@ -257,6 +248,11 @@ h3 {
 
 #section_hebergements p {
   margin: 10px 0px;
+}
+
+#section_hebergements a {
+  text-decoration: none;
+  color: black;
 }
 
 article {
@@ -278,7 +274,9 @@ article {
   background-color: rgb(242, 242, 242);
   border-radius: 30px;
 }
+
 .hebergements {
+  width: 25%;
   overflow: hidden;
   border: 10px white solid;
   border-radius: 30px;
@@ -289,13 +287,27 @@ article {
 }
 
 .hebergements:hover {
-  cursor: pointer;
   transform: scale(1.1);
+}
+
+.image_hebergement {
+  overflow: hidden;
+}
+
+.hebergements img {
+  width: 100%;
+  min-width: 220px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .text_box_hebergements {
   margin: 10px;
 }
+
+/*-- Section 2 Populaires ------------------------------------------------*/
 
 aside {
   display: flex;
@@ -327,15 +339,6 @@ aside {
 .populaires:hover {
   cursor: pointer;
   transform: scale(1.1);
-}
-
-.hebergements img {
-  width: 100%;
-  min-width: 220px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .populaires img {
@@ -408,8 +411,3 @@ h5 {
 }
 
 /*-- Autres -----------------------------------------------------------------*/
-
-img {
-  max-height: 100%;
-  max-width: 100%;
-}
