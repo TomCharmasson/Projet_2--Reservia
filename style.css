@@ -64,8 +64,8 @@ li a {
 }
 
 li:hover a {
-  color: #0065fc;
   border-top: 3px solid #0065fc;
+  color: #0065fc;
 }
 
 .inscription {
@@ -101,7 +101,7 @@ form {
   background-color: rgb(240, 240, 240);
 }
 
-#search_location {
+#champ_recherche {
   border-top: rgb(240, 240, 240) solid 1px;
   border-bottom: rgb(240, 240, 240) solid 1px;
   border-left: none;
@@ -117,7 +117,7 @@ input:focus {
   outline: none;
 }
 
-#search_location_button {
+#bouton_rechercher {
   border: solid #0065fc 1px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -128,6 +128,10 @@ input:focus {
   font-size: 1.4em;
 }
 
+#bouton_rechercher:hover {
+  cursor: pointer;
+}
+
 /*-- Section 1 Filtres ------------------------------------------------------*/
 
 .filter {
@@ -135,15 +139,7 @@ input:focus {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: space-between;
-}
-
-.filter a {
-  text-decoration: none;
-  color: black;
-}
-
-.filter:hover {
-  color: #0065fc;
+  margin: 20px 0px;
 }
 
 .filter_button {
@@ -156,8 +152,8 @@ input:focus {
   margin-left: 0px;
 }
 
-h3 {
-  margin: 15px;
+.filter_button:hover {
+  cursor: pointer;
 }
 
 .filters_buttons {
@@ -165,7 +161,7 @@ h3 {
   justify-content: space-evenly;
   align-items: center;
   height: 50px;
-  margin: 20px;
+  margin: 0px 20px;
   border: 2px rgb(217, 217, 217) solid;
   border-left: 0px;
   border-radius: 90px 90px;
@@ -177,38 +173,37 @@ h3 {
 .filters_buttons:hover {
   background-color: #0065fc;
   color: white;
+  cursor: pointer;
 }
 
-#economique {
-  font-size: 1.5em;
-  color: rgb(0, 086, 246);
-  border-radius: 40px;
-  padding: 15px 12px 13px 12px;
-  background-color: rgb(216, 232, 254);
-}
-
-#familial {
-  font-size: 1.5em;
-  color: rgb(0, 086, 246);
-  border-radius: 40px;
-  padding: 14px 17px;
-  background-color: rgb(216, 232, 254);
-}
-
-#romantique {
-  font-size: 1.5em;
-  color: rgb(0, 086, 246);
-  border-radius: 40px;
-  padding: 15px 15px 13px 15px;
-  background-color: rgb(216, 232, 254);
-}
-
+#economique,
+#familial,
+#romantique,
 #animaux {
   font-size: 1.5em;
   color: rgb(0, 086, 246);
   border-radius: 40px;
-  padding: 14px;
   background-color: rgb(216, 232, 254);
+}
+
+#economique {
+  padding: 15px 12px 13px 12px;
+}
+
+#familial {
+  padding: 14px 17px;
+}
+
+#romantique {
+  padding: 15px 15px 13px 15px;
+}
+
+#animaux {
+  padding: 14px;
+}
+
+h3 {
+  margin: 15px;
 }
 
 /*-- Section 1 Info -------------------------------------------------------*/
@@ -264,37 +259,44 @@ article {
 }
 
 .conteneur_hebergements {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: baseline;
   background-color: rgb(242, 242, 242);
   border-radius: 30px;
+  margin-bottom: 20px;
+  row-gap: 35px;
 }
 
 .hebergements {
-  min-width: 250px;
-  width: 25%;
-  border: 10px white solid;
-  border-radius: 30px;
+  width: 30%;
+  border-radius: 15px;
   background-color: white;
   box-shadow: 0px 0px 15px gray;
   transition: 0.5s;
   margin: 20px 0px;
   overflow: hidden;
+  padding: 0;
 }
 
 .hebergements:hover {
   transform: scale(1.1);
 }
 
+.hebergements .image_hebergement {
+  height: 115px;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+  margin: 5px;
+}
+
 .hebergements img {
-  height: 140px;
   width: 100%;
   min-width: 220px;
   position: relative;
-  object-fit: cover;
-  border-radius: 20px 20px 0px 0px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .text_box_hebergements {
@@ -317,13 +319,12 @@ aside {
   flex-direction: column;
   justify-content: space-between;
   background-color: rgb(242, 242, 242);
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
 .populaires {
   display: flex;
-  border: 10px white solid;
-  border-radius: 30px;
+  border-radius: 15px;
   background-color: white;
   box-shadow: 0px 0px 15px gray;
   transition: 0.5s;
@@ -335,15 +336,31 @@ aside {
   transform: scale(1.1);
 }
 
-.populaires img {
-  height: 160px;
-  width: 160px;
-  position: relative;
-  object-fit: cover;
-  border-radius: 20px 0px 0px 20px;
+.populaires a {
+  display: flex;
+  align-items: center;
 }
 
-.text_box {
+.populaires .image_populaire {
+  height: 140px;
+  width: 140px;
+  min-width: 140px;
+  overflow: hidden;
+  border-radius: 10px 0 0 10px;
+  margin: 5px;
+}
+
+.populaires img {
+  height: 100%;
+  min-height: 140px;
+  min-width: 140px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text_box_populaires {
   margin: 10px;
 }
 
@@ -354,42 +371,49 @@ aside {
 }
 
 .conteneur_activites {
-  max-height: 1000px;
+  max-height: 800px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.conteneur_activites img {
-  height: 140px;
-  width: 100%;
-  min-width: 220px;
-  position: relative;
-  object-fit: cover;
-  border-radius: 20px 20px 0px 0px;
-}
-
-.conteneur_activites h4 {
-  margin-left: 20px;
-  font-size: 1.4em;
+  justify-content: flex-start;
 }
 
 .activites {
+  width: 20%;
   min-width: 20%;
-  width: 10%;
-  height: auto;
-  overflow: hidden;
-  border-radius: 30px;
+  height: 50%;
+  border-radius: 15px;
   background-color: white;
   box-shadow: 0px 0px 15px gray;
   transition: 0.5s;
   margin: 20px 0px;
+  overflow: hidden;
+  padding: 0;
 }
 
 .activites:hover {
   transform: scale(1.1);
+}
+
+.activites .image_activites {
+  height: 115px;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+  margin: 5px;
+}
+
+.activites img {
+  width: 100%;
+  min-width: 220px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.activites h4 {
+  margin-left: 20px;
+  font-size: 1.4em;
 }
 
 /*-- Footer -----------------------------------------------------------------*/
