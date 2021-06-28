@@ -16,6 +16,7 @@
 body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   background-color: white;
+  margin: 0px;
 }
 
 main {
@@ -30,7 +31,7 @@ main {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  margin: 0px 45px 0px 45px;
+  margin: 3px 45px 3px 45px;
 }
 
 header img {
@@ -39,7 +40,7 @@ header img {
 }
 
 h1 {
-  margin-top: 0px;
+  margin: 0px;
   font-size: 1.7em;
 }
 
@@ -60,7 +61,7 @@ ul {
 li a {
   color: black;
   text-decoration: none;
-  padding: 40px;
+  padding: 50px;
 }
 
 li:hover a {
@@ -72,7 +73,7 @@ li:hover a {
   font-weight: bold;
   text-decoration: none;
   color: #0065fc;
-  padding: 40px;
+  padding: 50px;
   transition-duration: 0.4s;
 }
 
@@ -234,7 +235,7 @@ h3 {
 
 #section_hebergements h4 {
   margin: 0px;
-  font-size: 20px;
+  font-size: 1.2em;
 }
 
 #section_hebergements p {
@@ -250,7 +251,7 @@ article {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color: rgb(242, 242, 242);
   border-radius: 30px;
   padding: 40px;
@@ -264,19 +265,19 @@ article {
   justify-content: space-between;
   background-color: rgb(242, 242, 242);
   border-radius: 30px;
-  margin-bottom: 20px;
+  margin: 20px 0px 40px 0px;
   row-gap: 35px;
 }
 
 .hebergements {
   width: 30%;
+  border: 5px solid white;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0px 0px 15px gray;
   transition: 0.5s;
-  margin: 20px 0px;
-  overflow: hidden;
   padding: 0;
+  overflow: hidden;
 }
 
 .hebergements:hover {
@@ -284,10 +285,8 @@ article {
 }
 
 .hebergements .image_hebergement {
-  height: 115px;
+  height: 140px;
   overflow: hidden;
-  border-radius: 15px 15px 0 0;
-  margin: 5px;
 }
 
 .hebergements img {
@@ -324,6 +323,7 @@ aside {
 
 .populaires {
   display: flex;
+  border: 5px solid white;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0px 0px 15px gray;
@@ -342,18 +342,17 @@ aside {
 }
 
 .populaires .image_populaire {
-  height: 140px;
-  width: 140px;
-  min-width: 140px;
+  height: 160px;
+  width: 160px;
+  min-width: 160px;
   overflow: hidden;
   border-radius: 10px 0 0 10px;
-  margin: 5px;
 }
 
 .populaires img {
   height: 100%;
-  min-height: 140px;
-  min-width: 140px;
+  min-height: 160px;
+  min-width: 160px;
   position: relative;
   top: 50%;
   left: 50%;
@@ -361,7 +360,11 @@ aside {
 }
 
 .text_box_populaires {
-  margin: 10px;
+  height: 120px;
+  margin: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /*-- Section 3 Activités ----------------------------------------------------*/
@@ -371,15 +374,51 @@ aside {
 }
 
 .conteneur_activites {
-  max-height: 800px;
+  margin: 20px 0px;
+  max-height: 600px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  align-content: space-between;
+  align-items: stretch;
+}
+
+.activites_grand {
+  width: 23%;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 0px 15px gray;
+  transition: 0.5s;
+  margin: 20px 0px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.activites_grand:hover {
+  transform: scale(1.1);
+}
+
+.activites_grand .image_activites {
+  height: 492px;
+  overflow: hidden;
+}
+
+.activites_grand img {
+  height: 100%;
+  min-height: 220px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.activites_grand h4 {
+  margin: 15px;
+  font-size: 1.2em;
 }
 
 .activites {
-  width: 20%;
+  width: 23%;
   min-width: 20%;
   height: 50%;
   border-radius: 15px;
@@ -396,15 +435,14 @@ aside {
 }
 
 .activites .image_activites {
-  height: 115px;
+  height: 200px;
   overflow: hidden;
-  border-radius: 15px 15px 0 0;
-  margin: 5px;
 }
 
 .activites img {
   width: 100%;
   min-width: 220px;
+  min-height: 200px;
   position: relative;
   top: 50%;
   left: 50%;
@@ -412,8 +450,8 @@ aside {
 }
 
 .activites h4 {
-  margin-left: 20px;
-  font-size: 1.4em;
+  margin: 15px;
+  font-size: 1.2em;
 }
 
 /*-- Footer -----------------------------------------------------------------*/
