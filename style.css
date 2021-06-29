@@ -27,16 +27,11 @@ main {
 
 .header {
   display: flex;
-  align-content: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   margin: 3px 45px 3px 45px;
-}
-
-header img {
-  width: auto;
-  height: auto;
 }
 
 h1 {
@@ -44,17 +39,14 @@ h1 {
   font-size: 1.7em;
 }
 
-nav {
+.navigation {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: white;
 }
 
 ul {
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
   padding: 0px 0px 0px 0px;
 }
 
@@ -78,7 +70,7 @@ li:hover a {
 }
 
 .inscription:hover {
-  transform: scale(1.4);
+  transform: scale(1.3);
 }
 
 /*-- Section 1 Titres -------------------------------------------------------*/
@@ -102,7 +94,7 @@ form {
   font-size: larger;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  padding: 18px 22px 19px 22px;
+  padding: 19px 22px 20px 22px;
   background-color: rgb(240, 240, 240);
 }
 
@@ -135,6 +127,10 @@ input:focus {
 
 #bouton_rechercher:hover {
   cursor: pointer;
+}
+
+#icone_loupe {
+  display: none;
 }
 
 /*-- Section 1 Filtres ------------------------------------------------------*/
@@ -490,21 +486,52 @@ h5 {
   xxl: 1400px);
 */
 
+/*-- Media Queries -----------------------------------------------------------------*/
+
 @media screen and (max-width: 1024px) {
   main {
     width: auto;
-    margin: 20px;
+    margin: 0px;
   }
 
-  header {
+  #section_1 {
+    margin: 0px 20px 20px 20px;
+  }
+
+  .navigation {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   li:hover a {
     border-top: none;
     border-bottom: 3px solid #0065fc;
     color: #0065fc;
+  }
+
+  #icone_map {
+    font-size: larger;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 19px 22px 19px 22px;
+    background-color: rgb(240, 240, 240);
+  }
+
+  #bouton_rechercher {
+    display: none;
+  }
+
+  #icone_loupe {
+    display: inline;
+    padding: 16px 17px 17px 17px;
+    border: solid #0065fc 1px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #0065fc;
+    color: white;
+    height: 60px;
+    width: 160px;
+    font-size: 1.4em;
   }
 
   .filter {
@@ -527,35 +554,68 @@ h5 {
 
   article {
     width: 100%;
+    background-color: white;
   }
 
   .conteneur_hebergements {
     display: flex;
     flex-direction: column;
+    background-color: white;
   }
 
   .hebergements {
-    width: 100%;
+    width: auto;
+  }
+
+  .hebergements .image_hebergement {
+    height: 140px;
+    overflow: hidden;
   }
 
   aside {
     width: 100%;
-    margin-bottom: 20px;
+    border-radius: 0px;
+  }
+
+  #section_activites {
+    margin: 40px 40px;
+    width: 100%;
   }
 
   .conteneur_activites {
+    max-height: none;
     display: block;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    align-items: flex-start;
   }
 
   .activites_grand {
     width: 100%;
   }
 
+  .activites_grand .image_activites {
+    height: 180px;
+    overflow: hidden;
+  }
+
+  .activites_grand img {
+    width: 100%;
+    min-height: 200px;
+  }
+
   .activites {
+    width: 100%;
+  }
+
+  .activites .image_activites {
+    height: 180px;
+    overflow: hidden;
+  }
+
+  #conteneur_footer {
+    display: block;
+  }
+
+  footer {
     width: 100%;
   }
 }
