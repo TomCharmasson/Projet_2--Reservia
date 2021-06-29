@@ -87,6 +87,10 @@ li:hover a {
   margin: 0px 0px 20px 0px;
 }
 
+h1 {
+  font-size: 1.4em;
+}
+
 /*-- Section 1 Recherche ----------------------------------------------------*/
 
 form {
@@ -338,7 +342,6 @@ aside {
 
 .populaires a {
   display: flex;
-  align-items: center;
 }
 
 .populaires .image_populaire {
@@ -361,7 +364,7 @@ aside {
 
 .text_box_populaires {
   height: 120px;
-  margin: 0px 15px;
+  margin: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -475,4 +478,84 @@ h5 {
   margin-right: auto;
 }
 
-/*-- Autres -----------------------------------------------------------------*/
+/*-- Media Queries -----------------------------------------------------------------*/
+
+/*
+  $grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px);
+*/
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: auto;
+    margin: 20px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  li:hover a {
+    border-top: none;
+    border-bottom: 3px solid #0065fc;
+    color: #0065fc;
+  }
+
+  .filter {
+    margin: 0px;
+  }
+
+  .filter_button {
+    margin: 10px;
+  }
+
+  .filters_buttons {
+    margin: 10px;
+  }
+
+  #section_hebergements {
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  .conteneur_hebergements {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hebergements {
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .conteneur_activites {
+    display: block;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .activites_grand {
+    width: 100%;
+  }
+
+  .activites {
+    width: 100%;
+  }
+}
