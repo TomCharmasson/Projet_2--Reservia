@@ -25,18 +25,13 @@ main {
 
 /*-- Header -----------------------------------------------------------------*/
 
-.header {
+header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   margin: 3px 45px 3px 45px;
-}
-
-h1 {
-  margin: 0px;
-  font-size: 1.7em;
 }
 
 .navigation {
@@ -80,6 +75,7 @@ li:hover a {
 }
 
 h1 {
+  margin: 0px;
   font-size: 1.4em;
 }
 
@@ -94,7 +90,7 @@ form {
   font-size: larger;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  padding: 19px 22px 20px 22px;
+  padding: 19px 22px 19px 22px;
   background-color: rgb(240, 240, 240);
 }
 
@@ -281,7 +277,7 @@ article {
 }
 
 .hebergements:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .hebergements .image_hebergement {
@@ -290,8 +286,9 @@ article {
 }
 
 .hebergements img {
+  height: 100%;
   width: 100%;
-  min-width: 220px;
+  object-fit: cover;
   position: relative;
   top: 50%;
   left: 50%;
@@ -333,7 +330,7 @@ aside {
 }
 
 .populaires:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .populaires a {
@@ -345,13 +342,12 @@ aside {
   width: 160px;
   min-width: 160px;
   overflow: hidden;
-  border-radius: 10px 0 0 10px;
 }
 
 .populaires img {
+  width: 100%;
   height: 100%;
-  min-height: 160px;
-  min-width: 160px;
+  object-fit: cover;
   position: relative;
   top: 50%;
   left: 50%;
@@ -359,7 +355,7 @@ aside {
 }
 
 .text_box_populaires {
-  height: 120px;
+  height: auto;
   margin: 15px;
   display: flex;
   flex-direction: column;
@@ -394,7 +390,7 @@ aside {
 }
 
 .activites_grand:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .activites_grand .image_activites {
@@ -404,7 +400,8 @@ aside {
 
 .activites_grand img {
   height: 100%;
-  min-height: 220px;
+  width: 100%;
+  object-fit: cover;
   position: relative;
   top: 50%;
   left: 50%;
@@ -439,9 +436,9 @@ aside {
 }
 
 .activites img {
+  height: 100%;
   width: 100%;
-  min-width: 220px;
-  min-height: 200px;
+  object-fit: cover;
   position: relative;
   top: 50%;
   left: 50%;
@@ -490,17 +487,27 @@ h5 {
 
 @media screen and (max-width: 1024px) {
   main {
-    width: auto;
+    width: 100%;
     margin: 0px;
   }
 
-  #section_1 {
-    margin: 0px 20px 20px 20px;
+  /*-- Header -----------------------------------------------------------------*/
+
+  header {
+    width: 100%;
+    margin: 0;
   }
 
-  .navigation {
-    display: flex;
-    flex-direction: column-reverse;
+  .logo {
+    margin: 40px 40px 40px 40px;
+  }
+
+  .inscription {
+    padding: 20px;
+  }
+
+  .ancre_section {
+    padding: 20px;
   }
 
   li:hover a {
@@ -509,12 +516,24 @@ h5 {
     color: #0065fc;
   }
 
+  /*-- Section 1 -------------------------------------------------------*/
+
+  #section_1 {
+    width: 100%;
+    padding: 20px 20px 0px 20px;
+    margin: 0;
+  }
+
   #icone_map {
     font-size: larger;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     padding: 19px 22px 19px 22px;
     background-color: rgb(240, 240, 240);
+  }
+
+  #champ_recherche {
+    width: 100%;
   }
 
   #bouton_rechercher {
@@ -539,12 +558,14 @@ h5 {
   }
 
   .filter_button {
-    margin: 10px;
+    margin: 10px 20px 10px 0px;
   }
 
   .filters_buttons {
-    margin: 10px;
+    margin: 10px 20px 10px 0px;
   }
+
+  /*-- Section 2 Hebergements -------------------------------------------------------*/
 
   #section_hebergements {
     margin: 20px 0px;
@@ -553,6 +574,7 @@ h5 {
   }
 
   article {
+    padding: 20px;
     width: 100%;
     background-color: white;
   }
@@ -572,13 +594,18 @@ h5 {
     overflow: hidden;
   }
 
+  /*-- Section 2 Populaires -------------------------------------------------------*/
+
   aside {
+    padding: 20px;
     width: 100%;
     border-radius: 0px;
   }
 
+  /*-- Section 3 Activités -------------------------------------------------------*/
+
   #section_activites {
-    margin: 40px 40px;
+    margin: 20px;
     width: 100%;
   }
 
@@ -611,11 +638,14 @@ h5 {
     overflow: hidden;
   }
 
+  /*-- Footer -----------------------------------------------------------------*/
+
   #conteneur_footer {
     display: block;
   }
 
   footer {
+    padding: 20px;
     width: 100%;
   }
 }
