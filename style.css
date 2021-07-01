@@ -356,6 +356,7 @@ aside {
 
 .text_box_populaires {
   height: auto;
+  width: auto;
   margin: 15px;
   display: flex;
   flex-direction: column;
