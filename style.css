@@ -38,6 +38,10 @@ header {
   margin: 3px 45px 3px 45px;
 }
 
+nav {
+  margin-left: auto;
+}
+
 ul {
   list-style-type: none;
   display: flex;
@@ -295,14 +299,15 @@ article {
   width: 100%;
   object-fit: cover;
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .text_box_hebergements {
   margin: 10px;
   font-size: smaller;
+}
+
+.stars {
+  color: #0065fc;
 }
 
 /*-- Section 2 Populaires --------------------------------------------------*/
@@ -342,6 +347,7 @@ aside {
 
 .populaires a {
   display: flex;
+  width: 100%;
 }
 
 .populaires .image_populaire {
@@ -356,12 +362,10 @@ aside {
   height: 100%;
   object-fit: cover;
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .text_box_populaires {
+  width: 100%;
   margin: 15px;
   display: flex;
   flex-direction: column;
@@ -387,6 +391,11 @@ aside {
   align-items: stretch;
 }
 
+.conteneur_activites a {
+  text-decoration: none;
+  color: black;
+}
+
 .activites_grand {
   width: 23%;
   border-radius: 15px;
@@ -403,7 +412,7 @@ aside {
 }
 
 .activites_grand .image_activites {
-  height: 492px;
+  height: 488px;
   overflow: hidden;
 }
 
@@ -412,15 +421,11 @@ aside {
   width: 100%;
   object-fit: cover;
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .activites_grand h4 {
   margin: 15px;
-  font-size: 1.2em;
-  font-size: smaller;
+  font-size: 1em;
 }
 
 .activites {
@@ -450,9 +455,6 @@ aside {
   width: 100%;
   object-fit: cover;
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .activites h4 {
@@ -482,9 +484,11 @@ h5 {
   margin-right: auto;
 }
 
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*-- Media Queries -----------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*------- Media Queries -------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------*/
 
 /*
   $grid-breakpoints: (
@@ -496,9 +500,18 @@ h5 {
   xxl: 1400px);
 */
 
-/*-- Media Queries -----------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*-- Media Queries Laptop ----------------------------------------------------------*/
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1285px) {
+}
+
+/*--------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------*/
+/*-- Media Queries Tablet --------------------------------------------------------------------*/
+
+@media screen and (max-width: 991px) {
   main {
     width: 100%;
     margin: 0px;
@@ -631,11 +644,6 @@ h5 {
     overflow: hidden;
   }
 
-  .activites_grand img {
-    width: 100%;
-    min-height: 200px;
-  }
-
   .activites {
     width: 100%;
   }
@@ -691,7 +699,7 @@ h5 {
     background-color: #0065fc;
     color: white;
     height: 60px;
-    width: 160px;
+    width: 60px;
     font-size: 1.4em;
   }
 
@@ -702,10 +710,10 @@ h5 {
 
 /*--------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------*/
-/*-- Media Queries very thin -----------------------------------------------------------------*/
+/*-- Media Queries Very Thin Smartphone ------------------------------------------------------*/
 
 @media screen and (max-width: 383px) {
   .text_box_populaires {
-    font-size: 11px;
+    font-size: 11.5px;
   }
 }
