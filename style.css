@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "ralewaythin";
+  font-family: "Raleway";
   src: url("fonts/Raleway/raleway-variablefont_wght-webfont.eot");
   src: url("fonts/Raleway/raleway-variablefont_wght-webfont.eot?#iefix")
       format("embedded-opentype"),
@@ -82,6 +82,10 @@ li:hover a {
   margin: 0px 0px 20px 0px;
 }
 
+#title_box p {
+  margin: 10px 0;
+}
+
 h1 {
   margin: 0px;
   font-size: 1.4em;
@@ -95,22 +99,26 @@ form {
 }
 
 #icone_map {
-  font-size: larger;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  padding: 19px 22px 19px 22px;
-  background-color: rgb(240, 240, 240);
+  height: 50px;
+  width: 50px;
+  background-color: #f2f2f2;
 }
 
 #champ_recherche {
-  border-top: rgb(240, 240, 240) solid 1px;
-  border-bottom: rgb(240, 240, 240) solid 1px;
+  border-top: #f2f2f2 solid 1px;
+  border-bottom: #f2f2f2 solid 1px;
   border-left: none;
   border-right: none;
   padding: 10px;
   background-color: white;
-  height: 60px;
+  height: 50px;
   width: 300px;
+  font-family: inherit;
   font-size: 1.4em;
 }
 
@@ -119,14 +127,19 @@ input:focus {
 }
 
 #bouton_rechercher {
-  border: solid #0065fc 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #0065fc;
   color: white;
-  height: 60px;
+  height: 50px;
   width: 160px;
-  font-size: 1.4em;
+  font-family: inherit;
+  font-size: 1.3em;
 }
 
 #bouton_rechercher:hover {
@@ -139,22 +152,24 @@ input:focus {
 
 /*-- Section 1 Filtres ------------------------------------------------------*/
 
-.filter {
+#filter_container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-content: space-between;
+  align-items: center;
   margin: 20px 0px;
 }
 
 .filter_button {
+  padding-left: 0;
   color: black;
   border: none;
   background-color: white;
+  font-family: inherit;
 }
 
 .filter_button h3 {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 .filter_button:hover {
@@ -173,6 +188,7 @@ input:focus {
   padding: 0px;
   transition-duration: 0.4s;
   background-color: white;
+  font-family: inherit;
 }
 
 .filters_buttons:hover {
@@ -185,26 +201,28 @@ input:focus {
 #familial,
 #romantique,
 #animaux {
+  display: flex;
+  align-items: center;
   font-size: 1.5em;
   color: rgb(0, 086, 246);
-  border-radius: 40px;
+  border-radius: 50px;
   background-color: rgb(216, 232, 254);
 }
 
 #economique {
-  padding: 15px 12px 13px 12px;
+  padding: 15px 12px;
 }
 
 #familial {
-  padding: 14px 17px;
+  padding: 15px 16px;
 }
 
 #romantique {
-  padding: 15px 15px 13px 15px;
+  padding: 15px;
 }
 
 #animaux {
-  padding: 14px;
+  padding: 15px 13px;
 }
 
 h3 {
@@ -214,10 +232,15 @@ h3 {
 /*-- Section 1 Info -------------------------------------------------------*/
 
 #info {
+  font-size: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: rgb(0, 086, 246);
-  border: 1px rgb(240, 240, 240) solid;
+  border: 1px rgb(217, 217, 217) solid;
   border-radius: 40px;
-  padding: 9px 15px 9px 15px;
+  height: 20px;
+  width: 20px;
   background-color: white;
 }
 
@@ -238,13 +261,17 @@ h3 {
   justify-content: space-between;
 }
 
+h2 {
+  margin: 10px 0;
+}
+
 #section_hebergements h4 {
   margin: 0px;
   font-size: 1.2em;
 }
 
 #section_hebergements p {
-  margin: 10px 0px;
+  margin: 5px 0;
 }
 
 #section_hebergements a {
@@ -257,7 +284,7 @@ article {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
   border-radius: 30px;
   padding: 40px;
   width: 60%;
@@ -268,7 +295,7 @@ article {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
   border-radius: 30px;
   margin: 20px 0px 40px 0px;
   row-gap: 35px;
@@ -290,7 +317,7 @@ article {
 }
 
 .hebergements .image_hebergement {
-  height: 140px;
+  height: 120px;
   overflow: hidden;
 }
 
@@ -302,12 +329,48 @@ article {
 }
 
 .text_box_hebergements {
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 10px;
   font-size: smaller;
 }
 
-.stars {
+#stars_hebergement_1,
+#stars_hebergement_2,
+#stars_hebergement_3,
+#stars_hebergement_4,
+#stars_hebergement_5,
+#stars_hebergement_6 {
   color: #0065fc;
+}
+
+#stars_hebergement_1 :nth-child(5) {
+  color: rgb(217, 217, 217);
+}
+
+#stars_hebergement_3 :nth-child(5) {
+  color: rgb(217, 217, 217);
+}
+
+#stars_hebergement_4 :nth-child(4),
+#stars_hebergement_4 :nth-child(5) {
+  color: rgb(217, 217, 217);
+}
+
+#stars_hebergement_5 :nth-child(5) {
+  color: rgb(217, 217, 217);
+}
+
+#afficher_plus_button {
+  font-family: inherit;
+  width: fit-content;
+  font-size: 18px;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+#afficher_plus_button :hover {
+  cursor: pointer;
 }
 
 /*-- Section 2 Populaires --------------------------------------------------*/
@@ -319,15 +382,27 @@ aside {
   padding: 40px;
   width: 25%;
   border-radius: 30px;
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
+  height: auto;
+}
+
+.title_box_populaire {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#fleche_populaire {
+  font-size: 25px;
 }
 
 .conteneur_populaires {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
   border-radius: 15px;
+  margin: 20px 0px 20px 0px;
+  row-gap: 35px;
 }
 
 .populaires {
@@ -337,7 +412,6 @@ aside {
   background-color: white;
   box-shadow: 0px 0px 15px gray;
   transition: 0.5s;
-  margin: 20px 0px;
   overflow: hidden;
 }
 
@@ -373,6 +447,20 @@ aside {
   font-size: smaller;
 }
 
+#stars_populaire_1,
+#stars_populaire_2,
+#stars_populaire_3 {
+  color: #0065fc;
+}
+
+#stars_populaire_2 :nth-child(5) {
+  color: rgb(217, 217, 217);
+}
+
+#stars_populaire_3 :nth-child(5) {
+  color: rgb(217, 217, 217);
+}
+
 /*-- Section 3 Activités ----------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
 
@@ -383,12 +471,14 @@ aside {
 }
 
 .conteneur_activites {
+  margin: 20px 0;
   max-height: 600px;
+  row-gap: 35px;
+  column-gap: 35px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-between;
-  align-items: stretch;
 }
 
 .conteneur_activites a {
@@ -398,13 +488,13 @@ aside {
 
 .activites_grand {
   width: 23%;
+  min-width: 20%;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0px 0px 15px gray;
   transition: 0.5s;
-  margin: 20px 0px;
-  padding: 0;
   overflow: hidden;
+  padding: 0;
 }
 
 .activites_grand:hover {
@@ -412,7 +502,7 @@ aside {
 }
 
 .activites_grand .image_activites {
-  height: 488px;
+  height: 548px;
   overflow: hidden;
 }
 
@@ -431,12 +521,10 @@ aside {
 .activites {
   width: 23%;
   min-width: 20%;
-  height: 50%;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0px 0px 15px gray;
   transition: 0.5s;
-  margin: 20px 0px;
   overflow: hidden;
   padding: 0;
 }
@@ -446,7 +534,7 @@ aside {
 }
 
 .activites .image_activites {
-  height: 200px;
+  height: 230px;
   overflow: hidden;
 }
 
@@ -466,7 +554,7 @@ aside {
 /*---------------------------------------------------------------------------*/
 
 footer {
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
   padding: 40px;
 }
 
@@ -477,10 +565,16 @@ footer {
 }
 
 h5 {
-  font-size: 20px;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+footer p {
+  margin: 10px 0;
 }
 
 .footer_text {
+  display: block;
   margin-right: auto;
 }
 
@@ -525,7 +619,7 @@ h5 {
     margin: 0;
   }
 
-  .logo {
+  #logo {
     padding: 20px;
   }
 
@@ -569,7 +663,7 @@ h5 {
     margin: 0;
   }
 
-  .filter {
+  #filter_container {
     margin: 0px;
   }
 
@@ -577,7 +671,6 @@ h5 {
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    margin: 10px 20px 10px 0px;
   }
 
   .filters_buttons {
@@ -609,7 +702,7 @@ h5 {
   }
 
   .hebergements .image_hebergement {
-    height: 140px;
+    height: 120px;
     overflow: hidden;
   }
 
@@ -625,8 +718,7 @@ h5 {
 
   #section_activites {
     width: auto;
-    padding: 20px;
-    padding-bottom: 40px;
+    padding: 0px 20px 20px 20px;
   }
 
   .conteneur_activites {
@@ -637,19 +729,21 @@ h5 {
 
   .activites_grand {
     width: 100%;
+    margin: 30px 0;
   }
 
   .activites_grand .image_activites {
-    height: 180px;
+    height: 120px;
     overflow: hidden;
   }
 
   .activites {
     width: 100%;
+    margin: 30px 0;
   }
 
   .activites .image_activites {
-    height: 180px;
+    height: 120px;
     overflow: hidden;
   }
 
@@ -660,7 +754,7 @@ h5 {
   }
 
   footer {
-    padding: 20px;
+    padding: 20px 20px 20px 20px;
     width: auto;
   }
 }
@@ -674,7 +768,6 @@ h5 {
     font-size: larger;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    padding: 19px 22px 19px 22px;
     background-color: rgb(240, 240, 240);
   }
 
@@ -691,16 +784,18 @@ h5 {
   }
 
   #icone_loupe {
-    display: inline;
-    padding: 16px 17px 17px 17px;
-    border: solid #0065fc 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: #0065fc;
     color: white;
-    height: 60px;
-    width: 60px;
-    font-size: 1.4em;
+    height: 50px;
+    width: 50px;
+    font-size: 1.2em;
   }
 
   #icone_loupe:hover {
