@@ -38,7 +38,7 @@
       <section id="section_1">
         <!-- Section 1 Titres ----------------------------------------------------------------->
 
-        <div>
+        <div id="title_box">
           <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
           <p>En plein centre ville ou en pleine nature</p>
         </div>
@@ -70,7 +70,7 @@
 
         <!-- Section 1 Filtres --------------------------------------------------------------->
 
-        <div class="filter">
+        <div id="filter_container">
           <button class="filter_button">
             <h3>Filtres</h3>
           </button>
@@ -79,7 +79,7 @@
               <span id="economique">
                 <i class="fas fa-money-bill-wave"></i>
               </span>
-              <h3>Economique</h3>
+              <h3>Économique</h3>
             </button>
           </div>
           <div class="conteneur_filters_buttons">
@@ -136,7 +136,7 @@
                 <div class="text_box_hebergements">
                   <h4>Auberge la Cannebière</h4>
                   <p>Nuit à partir de 25€</p>
-                  <div class="stars">
+                  <div id="stars_hebergement_1">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -157,7 +157,7 @@
                 <div class="text_box_hebergements">
                   <h4>Hôtel du port</h4>
                   <p>Nuit à partir de 52€</p>
-                  <div class="stars">
+                  <div id="stars_hebergement_2">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -178,7 +178,7 @@
                 <div class="text_box_hebergements">
                   <h4>Hôtel Les mouettes</h4>
                   <p>Nuit à partir de 76€</p>
-                  <div class="stars">
+                  <div id="stars_hebergement_3">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -199,7 +199,7 @@
                 <div class="text_box_hebergements">
                   <h4>Hôtel de la mer</h4>
                   <p>Nuit à partir de 46€</p>
-                  <div class="stars">
+                  <div id="stars_hebergement_4">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -220,7 +220,7 @@
                 <div class="text_box_hebergements">
                   <h4>Auberge Le Panier</h4>
                   <p>Nuit à partir de 23€</p>
-                  <div class="stars">
+                  <div id="stars_hebergement_5">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -241,7 +241,7 @@
                 <div class="text_box_hebergements">
                   <h4>Hôtel chez Amina</h4>
                   <p>Nuit à partir de 96€</p>
-                  <div class="stars">
+                  <div id="stars_hebergement_6">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -252,14 +252,22 @@
               </a>
             </div>
           </div>
-          <p>Afficher plus</p>
+          <button id="afficher_plus_button">
+            <p>Afficher plus</p>
+          </button>
         </article>
 
         <!-- Section 2 Populaires ----------------------------------------------------------------->
         <!----------------------------------------------------------------------------------------->
 
         <aside>
-          <h2>Les plus populaires</h2>
+          <div class="title_box_populaire">
+            <h2>Les plus populaires</h2>
+            <span id="fleche_populaire">
+              <i class="fas fa-chart-line"></i>
+            </span>
+          </div>
+
           <div class="conteneur_populaires">
             <div class="populaires">
               <a href="">
@@ -274,14 +282,12 @@
                     <h4>Hôtel Le soleil du matin</h4>
                     <p>Nuit à partir de 128€</p>
                   </div>
-                  <div class="stars_populaires">
-                    <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
+                  <div id="stars_populaire_1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
                   </div>
                 </div>
               </a>
@@ -299,14 +305,12 @@
                     <h4>Au coeur de l'eau Chambres d'hôtes</h4>
                     <p>Nuit à partir de 71€</p>
                   </div>
-                  <div class="stars_populaires">
-                    <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
+                  <div id="stars_populaire_2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
                   </div>
                 </div>
               </a>
@@ -324,14 +328,12 @@
                     <h4>Hôtel Tout bleu et Blanc</h4>
                     <p>Nuit à partir de 68€</p>
                   </div>
-                  <div class="stars_populaires">
-                    <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
+                  <div id="stars_populaire_3">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
                   </div>
                 </div>
               </a>
