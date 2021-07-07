@@ -9,8 +9,8 @@
   </head>
 
   <body>
-    <!-- Header ------------------------------------------------------------------------------->
-    <!----------------------------------------------------------------------------------------->
+    <!-- Header --------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------->
 
     <header class="header">
       <div id="logo">
@@ -50,36 +50,31 @@
             <span id="icone_map">
               <i class="fas fa-map-marker-alt"></i>
             </span>
-            <p>
-              <label for="search_location"></label>
+            <label for="champ_recherche">
               <input
                 type="search"
                 placeholder="Marseille, France"
                 id="champ_recherche"
                 maxlength="16"
               />
-            </p>
-            <p>
-              <input type="submit" value="Rechercher" id="bouton_rechercher" />
-              <button type="submit" id="icone_loupe">
-                <i class="fas fa-search"></i>
-              </button>
-            </p>
+            </label>
+            <input type="submit" value="Rechercher" id="bouton_rechercher" />
+            <button type="submit" id="icone_loupe">
+              <i class="fas fa-search"></i>
+            </button>
           </form>
         </div>
 
         <!-- Section 1 Filtres --------------------------------------------------------------->
 
         <div id="filter_container">
-          <button class="filter_button">
-            <h3>Filtres</h3>
-          </button>
+          <button class="filter_button">Filtres</button>
           <div class="conteneur_filters_buttons">
             <button class="filters_buttons">
               <span id="economique">
                 <i class="fas fa-money-bill-wave"></i>
               </span>
-              <h3>Économique</h3>
+              <span> Économique </span>
             </button>
           </div>
           <div class="conteneur_filters_buttons">
@@ -87,7 +82,7 @@
               <span id="familial">
                 <i class="fas fa-child"></i>
               </span>
-              <h3>Familial</h3>
+              <span> Familial </span>
             </button>
           </div>
           <div class="conteneur_filters_buttons">
@@ -95,7 +90,7 @@
               <span id="romantique">
                 <i class="fas fa-heart"></i>
               </span>
-              <h3>Romantique</h3>
+              <span> Romantique </span>
             </button>
           </div>
           <div class="conteneur_filters_buttons">
@@ -103,7 +98,7 @@
               <span id="animaux">
                 <i class="fas fa-dog"></i>
               </span>
-              <h3>Animaux autorisés</h3>
+              <span> Animaux autorisés </span>
             </button>
           </div>
         </div>
@@ -252,9 +247,7 @@
               </a>
             </div>
           </div>
-          <button id="afficher_plus_button">
-            <p>Afficher plus</p>
-          </button>
+          <button id="afficher_plus_button">Afficher plus</button>
         </article>
 
         <!-- Section 2 Populaires ----------------------------------------------------------------->
@@ -267,7 +260,6 @@
               <i class="fas fa-chart-line"></i>
             </span>
           </div>
-
           <div class="conteneur_populaires">
             <div class="populaires">
               <a href="">
