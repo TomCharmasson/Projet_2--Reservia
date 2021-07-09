@@ -5,7 +5,7 @@
 
 body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   margin: 0px;
 }
 
@@ -337,6 +337,7 @@ article {
 }
 
 #afficher_plus_button {
+  display: contents;
   font-family: inherit;
   font-weight: bold;
   width: fit-content;
@@ -564,7 +565,7 @@ footer p {
 /*----------------------------------------------------------------------------------*/
 /*-- Media Queries Tablet ----------------------------------------------------------*/
 
-@media screen and (max-width: 1286px) {
+@media screen and (max-width: 1200px) {
   main {
     width: 100%;
     margin: 0px;
@@ -661,7 +662,7 @@ footer p {
   }
 
   .hebergements {
-    width: 320px;
+    width: 47%;
   }
   .hebergements .image_hebergement {
     height: 120px;
@@ -689,7 +690,7 @@ footer p {
   }
 
   .populaires {
-    width: 320px;
+    width: 47%;
   }
 
   /*-- Section 3 Activités -------------------------------------------------------*/
@@ -709,7 +710,7 @@ footer p {
   }
 
   .activites_grand {
-    width: 320px;
+    width: 47%;
   }
 
   .activites_grand .image_activites {
@@ -718,7 +719,7 @@ footer p {
   }
 
   .activites {
-    width: 320px;
+    width: 47%;
   }
 
   .activites .image_activites {
