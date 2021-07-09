@@ -424,10 +424,6 @@ aside {
   font-size: smaller;
 }
 
-.populaires :nth-child() img {
-  object-position: center top;
-}
-
 /*-- Section 3 Activités ----------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
 
@@ -725,6 +721,10 @@ footer p {
   .activites .image_activites {
     height: 120px;
     overflow: hidden;
+  }
+
+  #bonne_mere {
+    object-position: top center;
   }
 
   /*-- Footer -----------------------------------------------------------------*/
